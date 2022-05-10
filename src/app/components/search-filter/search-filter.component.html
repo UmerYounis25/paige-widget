@@ -1,0 +1,8 @@
+<md-input-container class="products-search-filter">
+  <input
+    mdInput
+    [placeholder]="placeholder"
+    [(ngModel)]="searchText"
+    (keyup)="onChangeSearch.emit(searchText)"
+  />
+</md-input-container>

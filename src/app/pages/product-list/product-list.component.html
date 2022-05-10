@@ -1,0 +1,23 @@
+<div class="products-container">
+  <h3>Products List</h3>
+  <div class="products-filter">
+    <paige-products-search-filter
+      (onChangeSearch)="onChangeFilter('search', $event)">
+    </paige-products-search-filter>
+    <paige-products-color-filter
+      [colors]="colors"
+      (onChangeColor)="onChangeFilter('color', $event)">
+    </paige-products-color-filter>
+    <a
+      md-button
+      color="primary"
+      type="button"
+      routerLink="/product-add"> Add New </a>
+  </div>
+  <paige-products-table
+    *ngIf="displayedProducts"
+    [products]="displayedProducts"
+    [displayedColumns]="displayedColumns"
+    (onClickDelete)="onClickDelete($event)">
+  </paige-products-table>
+</div>

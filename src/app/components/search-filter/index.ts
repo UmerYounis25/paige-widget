@@ -1,0 +1,1 @@
+export { ProductsSearchFilterComponent } from  "./search-filter.component"

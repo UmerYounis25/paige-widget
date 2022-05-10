@@ -1,0 +1,1 @@
+export { ProductsTableComponent } from  "./products-table.component"

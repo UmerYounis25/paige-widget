@@ -1,0 +1,8 @@
+<md-select
+  class="products-search-filter"
+  placeholder="Color"
+  [(ngModel)]="selectedColor"
+  (change)="onChangeColor.emit(selectedColor)">
+  <md-option value=""></md-option>
+  <md-option *ngFor="let color of colors" [value]="color">{{color}}</md-option>
+</md-select>

@@ -1,0 +1,56 @@
+<div class="product-form">
+  <h3>{{editId ? 'Update Product' : 'Add Product'}}</h3>
+  <form [formGroup]="form" *ngIf="form">
+    <md-input-container>
+      <input
+        mdInput
+        placeholder="Product name"
+        [formControl]="form.controls['name']">
+    </md-input-container>
+    <md-input-container>
+      <input
+        mdInput
+        placeholder="SKU"
+        [formControl]="form.controls['sku']">
+    </md-input-container>
+    <md-input-container>
+      <input
+        mdInput
+        placeholder="Type"
+        maxlength="56"
+        [formControl]="form.controls['type']">
+    </md-input-container>
+    <md-input-container>
+      <input
+        mdInput
+        placeholder="Color"
+        maxlength="56"
+        [formControl]="form.controls['color']">
+    </md-input-container>
+    <md-input-container>
+      <input
+        mdInput
+        placeholder="Price"
+        [formControl]="form.controls['price']">
+    </md-input-container>
+    <md-input-container>
+      <textarea
+        mdInput
+        placeholder="Product description"
+        maxlength="56"
+        [formControl]="form.controls['description']">
+      </textarea>
+    </md-input-container>
+    <button
+      md-button
+      color="primary"
+      type="button"
+      (click)="onSubmit()"
+      [disabled]="!form.valid || !form.touched"> Submit </button>
+    <a
+      md-button
+      color="warn"
+      type="button"
+      routerLink="/product-list"> Cancel </a>
+  </form>
+</div>
